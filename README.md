@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+# grimpette
+EN COURS - PROJET PERSO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Grimpette est un réseau social dédié aux grimpeurs en bloc. Il permet aux utilisateurs de se connecter, de partager des événements, de suivre leurs amis grimpeurs et d'accéder à des articles sur l'escalade pour améliorer leurs performances.
+Fonctionnalités à venir. Ceci est un projet en cours. Prochaine étape : créer une API et la fetcher sur le front
+1. Interagir et suivre des grimpeurs
 
-Currently, two official plugins are available:
+    Affichage des profils : Les utilisateurs peuvent consulter des profils d'autres grimpeurs en fonction de critères spécifiques (niveau, nom des salles, disponibilités etc.). Les profils sont récupérés depuis une base de données relationnelle.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Suivi des profils : Permet de suivre les profils d'autres grimpeurs pour recevoir leurs dernières activités, comme les blocs qu'ils ont réussis, les événements auxquels ils participent, etc.
 
-## Expanding the ESLint configuration
+2. Événements pour rencontrer d'autres grimpeurs
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+    Affichage d'événements : Le site affiche des événements en lien avec l'escalade, comme des compétitions, des sorties collectives, des formations, etc. Les utilisateurs peuvent s'inscrire à ces événements et recevoir des notifications.
 
-- Configure the top-level `parserOptions` property like this:
+3. Articles autour de la grimpe
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+    Affichage d'articles : Grimpette propose une section dédiée aux articles sur l'escalade, où les utilisateurs peuvent lire des conseils pour progresser, découvrir des actualités liées au sport, ou encore suivre les dernières tendances en matière de matériel.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Technologies utilisées ou qui le seront
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Le projet Grimpette utilise plusieurs technologies pour garantir une expérience utilisateur fluide et une architecture robuste.
+Frontend
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+    React : Pour la construction de l'interface utilisateur interactive. React permet une mise à jour rapide de l'UI sans rechargement de page.
+    UseContext : Pour la gestion de l'état de l'application (par exemple, gérer l'état des utilisateurs, des événements, etc.).
+    CSS : Pour la mise en forme et le style de l'application, avec une approche responsive.
+
+Backend
+
+    Node.js : Environnement d'exécution JavaScript pour le backend.
+    SQL/MySQL : Base de données utilisée pour stocker les informations des utilisateurs, des événements, et des articles. 
+    JWT (JSON Web Tokens) : Pour la gestion de l'authentification des utilisateurs et de la sécurité.
