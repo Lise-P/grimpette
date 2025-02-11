@@ -2,7 +2,7 @@
 EN COURS - PROJET PERSO
 
 Grimpette est un réseau social dédié aux grimpeurs en bloc. Il permet aux utilisateurs de se connecter, de partager des événements, de suivre leurs amis grimpeurs et d'accéder à des articles sur l'escalade pour améliorer leurs performances.
-Fonctionnalités
+Fonctionnalités à venir. Ceci est un projet en cours. Prochaine étape : créer une API et la fetcher sur le front
 1. Interagir et suivre des grimpeurs
 
     Affichage des profils : Les utilisateurs peuvent consulter des profils d'autres grimpeurs en fonction de critères spécifiques (niveau, nom des salles, disponibilités etc.). Les profils sont récupérés depuis une base de données relationnelle.
