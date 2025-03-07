@@ -1,0 +1,162 @@
+/* ======= BANNIÈRE ======= */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 35vh;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3px); /* Flou léger */
+  opacity: 0.5; /* Opacité de l'image */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(26, 188, 156, 0.2); /* Filtre vert très léger */
+}
+
+.banner-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%; /* Rend le logo totalement rond */
+  object-fit: cover; /* Assure que l'image garde une belle apparence */
+  border: 3px solid white; /* Ajoute un petit contour blanc pour un bel effet */
+  margin-top: 80px; /* Espace entre la nav et le logo */
+}
+
+.bannerSubtitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* ======= MENU DESKTOP (VISIBLE PAR DÉFAUT) ======= */
+.nav {
+  position: absolute;
+  top: 20px; /* Place la barre de navigation en haut */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-wrapper ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-wrapper ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  border-radius: 10px; /* Bordures arrondies */
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.nav-wrapper ul li a:hover {
+  background: rgba(26, 188, 156, 0.6); /* Fond vert semi-transparent */
+  backdrop-filter: blur(5px); /* Effet de flou */
+  color: white; /* Texte blanc */
+  transform: scale(1.05);
+}
+.nav-wrapper ul li a::after {
+  content: none;
+}
+
+.nav-wrapper ul li a:hover::after {
+  width: 80%;
+}
+/* ======= MENU BURGER MOBILE ======= */
+#toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none; /* Caché en desktop */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+/* MENU OUVERT */
+#toggle:checked + .hamburger .top-bun {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+#toggle:checked + .hamburger .meat {
+  opacity: 0;
+}
+
+#toggle:checked + .hamburger .bottom-bun {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ======= MENU MOBILE (CACHÉ EN DESKTOP) ======= */
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(9, 14, 107, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+  }
+
+  .nav.open {
+    top: 0;
+    transform: scale(1);
+  }
+
+  .nav-wrapper ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-wrapper ul li {
+    margin: 15px 0;
+  }
+
+  .nav-wrapper ul li a {
+    font-size: 2em;
+  }
+}
