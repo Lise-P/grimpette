@@ -1,5 +1,4 @@
-import { climbers } from "../components/Grimpeur";
-import GrimpeurList from "../components/GrimpeurList";
+import UserList from "../components/UserList";
 import Header from "../components/Header";
 import "../CSS/Home.css";
 
@@ -22,7 +21,7 @@ function Home() {
             alt="icone_filter"
           />
         </button>
-        <GrimpeurList grimpeurs={climbers} />
+        <UserList />
         <h2>Nos événements</h2>
         {/* futur incorporation de <Events events={events}>/ */}
         <figure className="event">
