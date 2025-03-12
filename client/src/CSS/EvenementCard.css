@@ -1,0 +1,75 @@
+.events-container {
+    display: grid;
+    gap: 20px; /* Espacement homogène */
+    padding: 20px;
+  }
+  
+  .event-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .event-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  figcaption {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .event-button {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .event-button:hover {
+    background: #16a085;
+  }
+  
+  /* 📱 Mobile : 1 événement par ligne */
+  @media (max-width: 768px) {
+    .events-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .event-card {
+      width: 90%;
+    }
+  }
+  
+  /* 📲 Tablette : 2 événements en ligne */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .events-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
+  }
+  
+  /* 💻 Desktop : 3 événements en ligne */
+  @media (min-width: 1025px) {
+    .events-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+    }
+  }
+  
