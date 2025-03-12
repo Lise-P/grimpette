@@ -21,10 +21,10 @@ INSERT INTO user (id, firstname, genre, age, niveau, salles, disponibilites) VAL
 (2, "Paul", "Homme", 35, "6b", "Mroc Laënnec, Climb Up Gerland", "en journée, 20h et +"),
 (3, "Marie", "Femme", 24, "5c", "Mroc Villeurbanne, Mroc Part-Dieu", "18h-20h, weekend"),
 (4, "Lucas", "Homme", 30, "6c", "Climb Up Confluence, Climb Up Gerland", "20h et +, weekend"),
-(5, "Camille", "Femme", 27, "5b", "Mroc Laënnec", "17h-19h, en journée"),
+(5, "Camille", "Femme", 27, "5b", "Mroc Laënnec, Mroc Villeurbanne", "17h-19h, en journée"),
 (6, "Hugo", "Homme", 23, "6a+", "Mroc Part-Dieu, Climb Up Gerland", "20h et +, weekend"),
 (7, "Claire", "Femme", 26, "5c+", "Mroc Villeurbanne, Climb Up Confluence", "18h-20h"),
-(8, "Maxime", "Homme", 28, "7a", "Climb Up Gerland", "17h-19h, weekend"),
+(8, "Maxime", "Homme", 28, "7a", "Climb Up Gerland, Mroc Villeurbanne", "17h-19h, weekend"),
 (9, "Laura", "Femme", 31, "5a", "Mroc Laënnec, Climb Up Confluence", "en journée, 18h-20h"),
 (10, "Antoine", "Homme", 33, "6b+", "Mroc Part-Dieu, Mroc Villeurbanne", "20h et +, weekend");
 

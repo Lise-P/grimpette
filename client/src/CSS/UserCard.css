@@ -1,0 +1,82 @@
+/* Styles généraux */
+.card {
+  background: #f4f4f4; /* Couleur de fond douce */
+  border-radius: 12px; /* Coins arrondis */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour un effet "carte" */
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Effet léger au survol */
+}
+
+.profile-pic {
+  width: 100px; /* Taille ajustable */
+  height: 100px;
+  border-radius: 50%; /* Rond */
+  object-fit: cover; /* Pour que l'image garde un bon ratio */
+  display: block;
+  margin: 0 auto 10px; /* Centré avec un petit espace */
+}
+
+/* Bouton "Suivre" */
+.bouttonSuivi {
+  background: #ff5733; /* Couleur dynamique */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.bouttonSuivi:hover {
+  background: #e64a2e;
+}
+
+/* Liste des infos du grimpeur */
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Mobile-first : 1 carte par ligne */
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Tablettes et petits écrans : 2 cartes par ligne */
+@media (min-width: 600px) {
+  .cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+/* Desktop : 3 cartes par ligne */
+@media (min-width: 1024px) {
+  .card {
+    width: 30%;
+  }
+}

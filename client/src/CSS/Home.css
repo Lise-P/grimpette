@@ -7,3 +7,27 @@
   width: 30px;
   height: 30px;
 }
+
+.separator {
+  width: 66%; /* 2/3 de la largeur */
+  height: 1px; /* Épaisseur du trait */
+  background-color: #ccc; /* Gris clair */
+  margin: 2rem auto; /* Espacement et centrage */
+}
+
+h2:not(.bannerSubtitle) {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333; /* Couleur neutre pour bien ressortir */
+  padding: 10px 0;
+  border-bottom: 3px solid #1abc9c; /* Trait sous le titre pour l'accentuer */
+  width: fit-content;
+  margin: 0 auto 20px auto; /* Centrage et espacement */
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+}
