@@ -9,6 +9,7 @@ interface User {
   niveau: string;
   salles: string;
   disponibilites: string;
+  profilePicture? : string;
 }
 
 function UserList() {
@@ -38,7 +39,7 @@ function UserList() {
   if (error) return <p>Erreur : {error}</p>;
 
   return (
-    <div>
+    <div className="cards-container">
       {users.length > 0 ? (
         users.map((user) => <UserCard key={user.id} user={user} />)
       ) : (
